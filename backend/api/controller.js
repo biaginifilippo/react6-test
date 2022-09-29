@@ -48,6 +48,17 @@ class ctrl {
         res.json({ "status": "success" })
     
     }
+    static async apiChangeProduct (req,res,next) {
+        console.log(`sono dentro al all'api req.body.id=${req.body.id}, req.body.body=${req.body.body} `)
+        try {
+            const product_id= parseInt(req.body.id)
+            const description= req.body.body
+            aquaDAO.changeProduct(product_id, description)
+        } catch (e) {
+            res.status(404).json({"status": e.message})
+        }
+        res.status(200).json({"status":"success"})
+    }
     
 }
 export default ctrl 

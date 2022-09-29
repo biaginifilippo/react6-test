@@ -8,6 +8,7 @@ const router = express.Router()
 if (router.route("/products").get(ctrl.apiGetProducts)) console.log("ho crteato il route di /products")
 router.route("/products").post(ctrl.apiPostProduct)
 router.route("/products").delete(ctrl.apiDeleteProduct)
+router.route("/products").put(ctrl.apiChangeProduct)
 
 router.route("*").get((req,res)=>{ console.log("comunico ")})
 

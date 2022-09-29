@@ -1,5 +1,6 @@
 import http from "../http-common";
 function addProduct (data){
-    return http.post("/products", data);
+    let response = http.post("/products", data);
+    return response.data
 }
 export default addProduct

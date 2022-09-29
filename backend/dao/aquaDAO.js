@@ -59,4 +59,14 @@ export default class aquaDAO {
             console.log(`couldn't delete the product: ${e}`)
         }
     }
+    static async changeProduct (product_id,description) {
+        console.log(`sono dentro al DAO product_id= ${product_id}, description = ${description}`)
+        try {products.updateOne(
+            {id: product_id},
+            {$set: {body: description} }
+        )
+        }catch (e){
+            console.log(`Unable to modify the product description, ${e}`)
+        }
+    }
 }
