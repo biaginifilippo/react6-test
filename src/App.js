@@ -9,8 +9,7 @@ import Products from './components/products'
 import CheckProduct from './components/checkproduct';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import PostProducts from './components/postproducts';
-import ChangeProduct from './components/changeproduct';
-import DeleteProduct from './components/deleteproduct';
+
 function App() {
   return (
     <div className="App">
@@ -25,8 +24,6 @@ function App() {
             <Route path= '/products/:productid' element= {<CheckProduct/>}></Route>
           </Route>
           <Route path='/postproducts' element= {<PostProducts/>}></Route>
-          <Route path='/deleteproducts' element= {<DeleteProduct/>}></Route>
-          <Route path='/putproducts' element= {<ChangeProduct/>}></Route>
           <Route path= '*' element = {<Error/>}> </Route>
         </Route>
       </Routes>

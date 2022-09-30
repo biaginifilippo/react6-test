@@ -23,7 +23,7 @@ class ctrl {
         if (isNaN(req.body.id))
         {
             console.log("couldn't create post, ID must be a number")
-            res.status(400).json({"status" : "couldn't create post, ID must be a number", "title": "ERROR"})
+            res.status(400).json({"status" : "Couldn't create post, ID must be a number", "title": "ERROR"})
             return //("couldn't create post, ID must be a number")
         }
         try {

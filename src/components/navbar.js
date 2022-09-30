@@ -16,12 +16,6 @@ const Navbar = () => {
             <NavLink className='btn btn-light' to='/postproducts' style={({ isActive }) => {
                 return ({ color: isActive ? 'blue' : 'black' })
             }} > Post</NavLink>
-            <NavLink className='btn btn-danger' to='/deleteproducts' style={({ isActive }) => {
-                return ({ color: isActive ? 'white' : 'black' })
-            }} > Delete</NavLink>
-            <NavLink className='btn btn-warning' to='/putproducts' style={({ isActive }) => {
-                return ({ color: isActive ? 'white' : 'black' })
-            }} > Put</NavLink>
         </div>
 
     )

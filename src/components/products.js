@@ -15,12 +15,12 @@ const Products = () => {
 
         console.log(url)
     }
-    
+
     return (
- <div>
+        <div>
             <h4>Products Page</h4>
             Product Id: <input onChange={handleChange} type="text" name='id' id='inputid'></input>
-          {/*  <button onClick = {()=>{console.log(url)}}> URL </button>*/}
+            {/*  <button onClick = {()=>{console.log(url)}}> URL </button>*/}
             <Link to={url} className='btn btn-primary  ' >
                 Enter
             </Link>
