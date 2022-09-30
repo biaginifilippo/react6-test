@@ -20,25 +20,32 @@ class ctrl {
         res.json(response);
     }
     static async apiPostProduct(req, res, next) {
+        if (isNaN(req.body.id))
+        {
+            console.log("couldn't create post, ID must be a number")
+            res.status(400).json({"status" : "couldn't create post, ID must be a number", "title": "ERROR"})
+            return //("couldn't create post, ID must be a number")
+        }
         try {
-            console.log(`req.boy.id= ${req.body.id}`)
+            console.log(`req.body.id= ${req.body.id}`)
+           
             const product_id = parseInt(req.body.id)
             const description = req.body.body
             aquaDAO.postProduct(
                 product_id,
                 description
             )
-            res.json({ status: "success" })
+            res.json({ status: "Post created correctly", title: "Success" })
         } catch (e) {
             res.status(500).json({ status: e.message })
-            console.log(`couldnì't post the product, ${e}`)
+            console.log(`couldn't post the product, ${e}`)
         }
 
     }
     static async apiDeleteProduct(req, res, next) {
         try {
             console.log("sono dentro all'api ")
-            const product_id =req.query.id
+            const product_id = req.query.id
             console.log(`product_id= ${product_id}`)
             aquaDAO.deleteProduct(product_id)
         } catch (e) {
@@ -46,19 +53,19 @@ class ctrl {
             res.status(404).json({ "status": e.message })
         }
         res.json({ "status": "success" })
-    
+
     }
-    static async apiChangeProduct (req,res,next) {
+    static async apiChangeProduct(req, res, next) {
         console.log(`sono dentro al all'api req.body.id=${req.body.id}, req.body.body=${req.body.body} `)
         try {
-            const product_id= parseInt(req.body.id)
-            const description= req.body.body
+            const product_id = parseInt(req.body.id)
+            const description = req.body.body
             aquaDAO.changeProduct(product_id, description)
         } catch (e) {
-            res.status(404).json({"status": e.message})
+            res.status(404).json({ "status": e.message })
         }
-        res.status(200).json({"status":"success"})
+        res.status(200).json({ "status": "success" })
     }
-    
+
 }
 export default ctrl 
