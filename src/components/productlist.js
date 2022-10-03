@@ -47,6 +47,7 @@ const ProductList = () => {
                                     <br />
                                     <br />
                                     <div className="card text-center">
+                                    <img src="https://www.prontopiscine.it/img/cms/Marchi/aqua.png" class="card-img-top" alt=""/>
                                         <div className="card-body">
                                             <h5 className="card-title">{product.id}</h5>
                                             <p className="card-text">{product.body}</p>
