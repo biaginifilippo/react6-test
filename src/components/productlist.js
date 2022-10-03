@@ -93,6 +93,7 @@ const ProductList = () => {
                         </Modal.Header>
                         <Modal.Body>
                             <div className="row">
+                            <img src="https://www.prontopiscine.it/img/cms/Marchi/aqua.png" class="card-img-top" alt=""/>
                                 <b>Product ID : {modProd.id}</b> <br/>
                                 This operarion is not reversible
                                 <textarea className="form-control-lg" id="description" rows="3" 
