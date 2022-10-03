@@ -104,7 +104,7 @@ const ProductList = () => {
                             <Link to="/products" className="btn btn-primary" onClick={handleClose}>
                                 Back to the products
                             </Link>
-                            <button className={apiCall} onClick={()=> {
+                            <button className={apiCall} onClick={()=> { 
                                 if (apiCall=="btn btn-danger"){
                                     deleteproduct(modProd)
                                     handleClose()

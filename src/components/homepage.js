@@ -71,6 +71,7 @@ const Homepage = () => {
             </rs-slide>
             <br/><br/><br/><br/>
         </div>
+        <>
         <div className="col"></div>
         <div className="col"></div>
         <div className="col"></div>
@@ -133,8 +134,11 @@ const Homepage = () => {
         <div className="col"></div>
         <div className="col"></div>        
         <div className="col"></div>
+        </>
         </div>
+        <>
         <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+        </>
         </div>
     )
 }
