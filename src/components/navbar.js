@@ -9,10 +9,10 @@ const Navbar = () => {
             }}> Home Page </NavLink>
             <NavLink className='btn btn-light' to='/about' style={({ isActive }) => {
                 return { color: isActive ? 'blue' : 'black' }
-            }}> About</NavLink>
+            }}> About us</NavLink>
             <NavLink className='btn btn-light' to='/products' style={({ isActive }) => {
                 return ({ color: isActive ? 'blue' : 'black' })
-            }} > Products</NavLink>
+            }} >Our Products</NavLink>
             <NavLink className='btn btn-light' to='/postproducts' style={({ isActive }) => {
                 return ({ color: isActive ? 'blue' : 'black' })
             }} > Post</NavLink>
